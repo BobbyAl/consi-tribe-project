@@ -179,19 +179,37 @@ function HudTooltip({ active, payload }: any) {
 
 export default function App() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const brainVideoRef = useRef<HTMLVideoElement>(null);
   const [sec, setSec]   = useState(0);
   const [time, setTime] = useState(0);
+  const [rightTab, setRightTab] = useState<'audio' | 'brain'>('audio');
   const histRef         = useRef<HistPt[]>([]);
+  const audioHistRef    = useRef<Array<{sec: number; [k: string]: number}>>([]);
   const [history, setHistory] = useState<HistPt[]>([]);
+  const [audioHist, setAudioHist] = useState<Array<{sec: number; [k: string]: number}>>([]);
+
+  const [facialVisible, setFacialVisible] = useState(true);
+  const [rightVisible, setRightVisible] = useState(true);
+  const [transcriptVisible, setTranscriptVisible] = useState(true);
 
   // rAF loop
   useEffect(() => {
     let raf: number;
     const tick = () => {
-      if (videoRef.current) {
+      if (videoRef.current && brainVideoRef.current) {
         const t = videoRef.current.currentTime;
         setTime(t);
         setSec(prev => { const n = Math.floor(t); return n !== prev ? n : prev; });
+        // Sync brain video: update frequently for smooth playback
+        if (Math.abs(brainVideoRef.current.currentTime - t) > 0.05) {
+          brainVideoRef.current.currentTime = t;
+        }
+        // Sync play/pause state
+        if (videoRef.current.paused && !brainVideoRef.current.paused) {
+          brainVideoRef.current.pause();
+        } else if (!videoRef.current.paused && brainVideoRef.current.paused) {
+          brainVideoRef.current.play().catch(() => {});
+        }
       }
       raf = requestAnimationFrame(tick);
     };
@@ -208,6 +226,20 @@ export default function App() {
     const next = [...histRef.current.filter(p => p.sec >= sec - WIN), pt];
     histRef.current = next;
     setHistory([...next]);
+  }, [sec]);
+
+  // Build rolling audio history (3-second window)
+  useEffect(() => {
+    const a = audioData[sec.toString()];
+    if (!a) return;
+    const AUDIO_WIN = 3;
+    const pt: {sec: number; [k: string]: number} = { sec };
+    Object.entries(a.audio_emotions).forEach(([k, v]) => {
+      pt[k] = +(v * 100).toFixed(1);
+    });
+    const next = [...audioHistRef.current.filter(p => p.sec >= sec - AUDIO_WIN), pt];
+    audioHistRef.current = next;
+    setAudioHist([...next]);
   }, [sec]);
 
   // ── Raw current data ────────────────────────────────────────────────────────
@@ -234,10 +266,14 @@ export default function App() {
     ? topN(Object.fromEntries(FACE_KEYS.map(k => [k, face[k as keyof FaceEntry] as number])), 3).map(([k]) => k) as FaceKey[]
     : ['fear_idx','neutral_idx','sad_idx'] as FaceKey[];
 
-  const audioBars = dAudio
-    ? Object.entries(dAudio.audio_emotions).map(([k,v]) => ({
-        k, label: AUDIO_LABEL[k]??k, v: +(v*100).toFixed(1),
-      }))
+  // Compute averaged audio bars from history
+  const audioBars = audioHist.length > 0
+    ? Object.keys(audioHist[0])
+        .filter(k => k !== 'sec')
+        .map(k => {
+          const avg = audioHist.reduce((sum, pt) => sum + (pt[k] ?? 0), 0) / audioHist.length;
+          return { k, label: AUDIO_LABEL[k] ?? k, v: +avg.toFixed(1) };
+        })
     : [];
 
   const rmsNorm  = dAudio ? Math.min((dAudio.audio_acoustics.rms_energy / MAX_RMS)*100, 100) : 0;
@@ -278,10 +314,18 @@ export default function App() {
             ● {face.emotion.toUpperCase()}
           </span>
         )}
+        <div style={{display:'flex', gap:5, marginLeft:20}}>
+          <button style={{fontSize:8, background:'rgba(255,255,255,0.08)', border:'1px solid rgba(255,255,255,0.2)', color:'white', padding:'2px 8px', cursor:'pointer', borderRadius:999}} onClick={() => setFacialVisible(!facialVisible)}>{facialVisible ? 'Hide Facial' : 'Show Facial'}</button>
+          <button style={{fontSize:8, background:'rgba(255,255,255,0.08)', border:'1px solid rgba(255,255,255,0.2)', color:'white', padding:'2px 8px', cursor:'pointer', borderRadius:999}} onClick={() => setRightVisible(!rightVisible)}>{rightVisible ? 'Hide Right' : 'Show Right'}</button>
+          <button style={{fontSize:8, background:'rgba(255,255,255,0.08)', border:'1px solid rgba(255,255,255,0.2)', color:'white', padding:'2px 8px', cursor:'pointer', borderRadius:999}} onClick={() => setTranscriptVisible(!transcriptVisible)}>{transcriptVisible ? 'Hide Transcript' : 'Show Transcript'}</button>
+        </div>
       </Panel>
 
-      {/* ── TOP-LEFT: Facial ECG ──────────────────────────────────────────── */}
-      <Panel style={{ top:68, left:16, width:320, height:238, zIndex:20, display:'flex', flexDirection:'column' }}>
+      {/* ── TOP-LEFT: Facial ECG ─────────────────────────────────────── */}
+      {facialVisible && (
+      <Panel style={{ top:68, left:16, width:320, height:280, zIndex:20, display:'flex', flexDirection:'column', resize:'both', overflow:'hidden' }}>
+      <button style={{position:'absolute', top:5, right:5, background:'none', border:'none', color:'white', fontSize:12, cursor:'pointer', zIndex:10}} onClick={() => setFacialVisible(false)}>×</button>
+
         <PanelLabel>Facial Micro-Expressions</PanelLabel>
 
         {face && (
@@ -301,7 +345,7 @@ export default function App() {
                      tickLine={false} axisLine={false} tickFormatter={v=>`${v}%`}/>
               <ReTooltip content={<HudTooltip />}/>
               {topFaceKeys.map(k => (
-                <Line key={k} type="monotone" dataKey={k}
+                <Line key={k} type="natural" dataKey={k}
                       stroke={C[k]} strokeWidth={1.5}
                       dot={false} isAnimationActive={false}/>
               ))}
@@ -312,7 +356,7 @@ export default function App() {
         {/* ── LEGEND ── */}
         <div style={{
           display:'flex', flexWrap:'wrap', gap:'5px 14px',
-          marginTop:8, paddingTop:8,
+          marginTop:6, paddingTop:6,
           borderTop:'1px solid rgba(255,255,255,0.07)',
         }}>
           {topFaceKeys.map(k => (
@@ -329,9 +373,12 @@ export default function App() {
           ))}
         </div>
       </Panel>
+      )}
 
-      {/* ── BOTTOM-LEFT: Transcript + Text Sentiment ─────────────────────── */}
-      <Panel style={{ bottom:72, left:16, width:380, zIndex:20 }}>
+      {/* ── BOTTOM-CENTER: Transcript + Text Sentiment ─────────────────────── */}
+      {transcriptVisible && (
+      <Panel style={{ bottom:24, left:'50%', transform:'translateX(-50%)', width:320, zIndex:20, display:'flex', flexDirection:'column' }}>
+      <button style={{position:'absolute', top:5, right:5, background:'none', border:'none', color:'white', fontSize:12, cursor:'pointer'}} onClick={() => setTranscriptVisible(false)}>×</button>
 
         {/* Header row */}
         <div style={{ display:'flex', alignItems:'center', marginBottom:8 }}>
@@ -354,107 +401,118 @@ export default function App() {
         </p>
 
         {/* Emotion chips */}
-        <div style={{ display:'flex', flexWrap:'wrap', gap:5, marginBottom:8,
+        <div style={{ display:'flex', flexWrap:'wrap', gap:5,
                       opacity: textStale ? 0.38 : 1, transition:'opacity 0.8s ease' }}>
           {topN(dText, 3).map(([label,val]) => (
             <Chip key={label} label={label} pct={val*100} color="#60a5fa"/>
           ))}
         </div>
+      </Panel>
+      )}
 
-        {/* Progress bars */}
-        <div style={{ opacity: textStale ? 0.35 : 1, transition:'opacity 0.8s ease' }}>
-          {topN(dText, 5).map(([label,val]) => (
-            <div key={label} style={{ display:'flex', alignItems:'center', gap:6, marginBottom:4 }}>
-              <span style={{ fontSize:8, color:'rgba(255,255,255,0.28)', width:68,
-                             overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>
-                {label}
-              </span>
-              <div style={{ flex:1, height:2, borderRadius:2, background:'rgba(255,255,255,0.08)', overflow:'hidden' }}>
-                <div style={{ height:'100%', borderRadius:2, background:'#60a5fa',
-                              width:`${(val*100).toFixed(1)}%`, transition:'width 0.4s ease' }}/>
+      {/* ── RIGHT: Audio + Brain (tabs) ───────────────────────────────────── */}
+      {rightVisible && (
+      <Panel style={{ top:68, right:16, width:288, height:320, zIndex:20, display:'flex', flexDirection:'column', resize:'both', overflow:'hidden', minWidth:240, minHeight:240 }}>
+      <button style={{position:'absolute', top:5, right:5, background:'none', border:'none', color:'white', fontSize:12, cursor:'pointer', zIndex:10}} onClick={() => setRightVisible(false)}>×</button>
+
+        {/* Tab buttons */}
+        <div style={{ display:'flex', gap:8, marginBottom:12, borderBottom:'1px solid rgba(255,255,255,0.07)', paddingBottom:8 }}>
+          <button
+            onClick={() => setRightTab('audio')}
+            style={{
+              background:'none', border:'none', color: rightTab === 'audio' ? '#fff' : 'rgba(255,255,255,0.4)',
+              fontSize:9, fontWeight: rightTab === 'audio' ? 600 : 400, letterSpacing:'0.1em', cursor:'pointer',
+              padding:'2px 8px', borderBottom: rightTab === 'audio' ? '2px solid #60a5fa' : 'none',
+              transition:'all 0.2s ease', fontFamily:"'IBM Plex Mono', monospace",
+            }}
+          >
+            AUDIO
+          </button>
+          <button
+            onClick={() => setRightTab('brain')}
+            style={{
+              background:'none', border:'none', color: rightTab === 'brain' ? '#fff' : 'rgba(255,255,255,0.4)',
+              fontSize:9, fontWeight: rightTab === 'brain' ? 600 : 400, letterSpacing:'0.1em', cursor:'pointer',
+              padding:'2px 8px', borderBottom: rightTab === 'brain' ? '2px solid #818cf8' : 'none',
+              transition:'all 0.2s ease', fontFamily:"'IBM Plex Mono', monospace",
+            }}
+          >
+            BRAIN
+          </button>
+        </div>
+
+        {/* Audio tab */}
+        {rightTab === 'audio' && (
+          <>
+            {/* Audio header */}
+            <div style={{ display:'flex', alignItems:'center', marginBottom:8 }}>
+              <PanelLabel>Acoustic &amp; Vocal Sentiment</PanelLabel>
+              {audioStale && <StalePill />}
+            </div>
+
+            {/* RMS bar */}
+            <div style={{ display:'flex', alignItems:'center', gap:6, marginBottom:10,
+                          fontSize:8, color:'rgba(255,255,255,0.28)',
+                          opacity: audioStale ? 0.38 : 1, transition:'opacity 0.8s ease' }}>
+              <span>RMS</span>
+              <div style={{ flex:1, height:3, borderRadius:3, background:'rgba(255,255,255,0.08)', overflow:'hidden' }}>
+                <div style={{
+                  height:'100%', borderRadius:3,
+                  background:'linear-gradient(90deg,#fde047,#f97316)',
+                  width:`${rmsNorm}%`, transition:'width 0.2s ease',
+                }}/>
               </div>
-              <span style={{ fontSize:8, color:'rgba(255,255,255,0.28)', width:24,
-                             textAlign:'right', fontVariantNumeric:'tabular-nums' }}>
-                {(val*100).toFixed(0)}%
+              <span style={{ fontVariantNumeric:'tabular-nums', width:48, textAlign:'right' }}>
+                {dAudio ? dAudio.audio_acoustics.rms_energy.toExponential(2) : '—'}
               </span>
             </div>
-          ))}
-        </div>
-      </Panel>
 
-      {/* ── RIGHT: Audio + Brain ─────────────────────────────────────────── */}
-      <Panel style={{ top:68, right:16, width:288, bottom:72, zIndex:20, display:'flex', flexDirection:'column' }}>
+            {/* BarChart */}
+            <div style={{ flex:'1 1 0', minHeight:0, opacity: audioStale ? 0.38 : 1, transition:'opacity 0.8s ease' }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={audioBars} margin={{ top:4, right:4, bottom:0, left:-24 }} barCategoryGap="22%">
+                  <XAxis dataKey="label" tick={{ fill:'rgba(255,255,255,0.45)', fontSize:9 }}
+                         tickLine={false} axisLine={false}/>
+                  <YAxis domain={[0,100]} tick={{ fill:'rgba(255,255,255,0.2)', fontSize:8 }}
+                         tickLine={false} axisLine={false} tickFormatter={v=>`${v}%`}/>
+                  <ReTooltip content={<HudTooltip />}/>
+                  <ReferenceLine y={rmsNorm} stroke="rgba(253,224,71,0.4)"
+                                 strokeDasharray="3 3" strokeWidth={1}/>
+                  <Bar dataKey="v" radius={[3,3,0,0]} isAnimationActive={false}>
+                    {audioBars.map(d => (
+                      <Cell key={d.k} fill={C[d.k] ?? '#6366f1'}/>
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </>
+        )}
 
-        {/* Audio header */}
-        <div style={{ display:'flex', alignItems:'center', marginBottom:8 }}>
-          <PanelLabel>Acoustic &amp; Vocal Sentiment</PanelLabel>
-          {audioStale && <StalePill />}
-        </div>
-
-        {/* RMS bar */}
-        <div style={{ display:'flex', alignItems:'center', gap:6, marginBottom:10,
-                      fontSize:8, color:'rgba(255,255,255,0.28)',
-                      opacity: audioStale ? 0.38 : 1, transition:'opacity 0.8s ease' }}>
-          <span>RMS</span>
-          <div style={{ flex:1, height:3, borderRadius:3, background:'rgba(255,255,255,0.08)', overflow:'hidden' }}>
-            <div style={{
-              height:'100%', borderRadius:3,
-              background:'linear-gradient(90deg,#fde047,#f97316)',
-              width:`${rmsNorm}%`, transition:'width 0.2s ease',
-            }}/>
+        {/* Brain tab */}
+        {rightTab === 'brain' && (
+          <div style={{ display:'flex', flexDirection:'column', gap:6, flex:1, minHeight:0 }}>
+            <PanelLabel>TRIBEv2 Neural Activations</PanelLabel>
+            <video
+              ref={brainVideoRef}
+              src="src/assets/brain_responses_video.mp4"
+              style={{ flex:1, width:'100%', height:'100%', borderRadius:6, backgroundColor:'#000', objectFit:'contain' }}
+              muted
+            />
           </div>
-          <span style={{ fontVariantNumeric:'tabular-nums', width:48, textAlign:'right' }}>
-            {dAudio ? dAudio.audio_acoustics.rms_energy.toExponential(2) : '—'}
-          </span>
-        </div>
+        )}
 
-        {/* BarChart */}
-        <div style={{ flex:'1 1 0', minHeight:0, opacity: audioStale ? 0.38 : 1, transition:'opacity 0.8s ease' }}>
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={audioBars} margin={{ top:4, right:4, bottom:0, left:-24 }} barCategoryGap="22%">
-              <XAxis dataKey="label" tick={{ fill:'rgba(255,255,255,0.45)', fontSize:9 }}
-                     tickLine={false} axisLine={false}/>
-              <YAxis domain={[0,100]} tick={{ fill:'rgba(255,255,255,0.2)', fontSize:8 }}
-                     tickLine={false} axisLine={false} tickFormatter={v=>`${v}%`}/>
-              <ReTooltip content={<HudTooltip />}/>
-              <ReferenceLine y={rmsNorm} stroke="rgba(253,224,71,0.4)"
-                             strokeDasharray="3 3" strokeWidth={1}/>
-              <Bar dataKey="v" radius={[3,3,0,0]} isAnimationActive={false}>
-                {audioBars.map(d => (
-                  <Cell key={d.k} fill={C[d.k] ?? '#6366f1'}/>
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-
-        <div style={{ height:1, background:'rgba(255,255,255,0.08)', margin:'10px 0' }}/>
-
-        {/* Brain */}
-        <div style={{ display:'flex', flexDirection:'column', alignItems:'center',
-                      justifyContent:'center', gap:8, paddingBottom:4 }}>
-          <PanelLabel>TRIBEv2 Neural Activations</PanelLabel>
-          <svg width="52" height="52" viewBox="0 0 64 64"
-               style={{ opacity:.22, animation:'pulse 2s ease-in-out infinite' }}>
-            <circle cx="32" cy="22" r="18" fill="none" stroke="#818cf8" strokeWidth="1.2"/>
-            <path d="M14 22 Q6 36 14 48 Q22 60 32 56 Q42 60 50 48 Q58 36 50 22"
-                  fill="none" stroke="#818cf8" strokeWidth="1.2"/>
-            <line x1="32" y1="4" x2="32" y2="60" stroke="#818cf8" strokeWidth="0.5" strokeDasharray="2 3"/>
-          </svg>
-          <span style={{ fontSize:8, color:'rgba(255,255,255,0.2)', letterSpacing:'0.2em', textTransform:'uppercase' }}>
-            Awaiting Parcellation
-          </span>
-          <div style={{ display:'flex', gap:4 }}>
-            {[0,1,2].map(i => (
-              <div key={i} style={{
-                width:5, height:5, borderRadius:'50%', background:'rgba(99,102,241,0.5)',
-                animation:`bounce 1s ease-in-out ${i*120}ms infinite`,
-              }}/>
-            ))}
-          </div>
-        </div>
+        {/* Keep brain video in DOM when audio tab active (hidden but syncing) */}
+        {rightTab === 'audio' && (
+          <video
+            ref={brainVideoRef}
+            src="src/assets/brain_responses_video.mp4"
+            style={{ position:'fixed', left:'-9999px', pointerEvents:'none' }}
+            muted
+          />
+        )}
       </Panel>
-
+      )}
       <style>{`
         @keyframes pulse  { 0%,100%{opacity:.22} 50%{opacity:.38} }
         @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }

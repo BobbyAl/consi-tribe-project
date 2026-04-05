@@ -1,0 +1,54 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+# Optional npm cache directory
+.npm
+# Vite / build outputs
+dist/
+build/
+.vite
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.env
+.venv/
+venv/
+ENV/
+env/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Data / large binaries
+*.pt
+*.pth
+*.h5
+*.ckpt
+
+# Local logs
+*.log
+
+# Optional project artifacts
+coverage/
+.mypy_cache/
+.pytest_cache/
+
+# Visualization app local files
+visualization/node_modules/
+visualization/dist/
+visualization/build/
