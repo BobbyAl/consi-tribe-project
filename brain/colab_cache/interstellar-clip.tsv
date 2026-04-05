@@ -1,0 +1,433 @@
+text	start	duration	sequence_id	sentence
+Is	8.286	0.040000000000000924	0	 Is that wrong?
+that	8.346	0.17999999999999972	0	 Is that wrong?
+wrong?	8.566	0.3199999999999985	0	 Is that wrong?
+I've	10.307	0.14100000000000001	1	I've waited years.
+waited	10.488	0.3000000000000007	1	I've waited years.
+years.	10.848	0.29999999999999893	1	I've waited years.
+How	13.09	0.27999999999999936	2	How many years?
+many	13.67	0.22000000000000064	2	How many years?
+years?	13.93	0.2599999999999998	2	How many years?
+By	16.672	0.14000000000000057	3	By now it must be...
+now	16.852	0.14000000000000057	3	By now it must be...
+it	17.032	0.05999999999999872	3	By now it must be...
+must	17.152	0.2010000000000005	3	By now it must be...
+be...	17.433	0.1999999999999993	3	By now it must be...
+It's	17.853	0.4799999999999969	4	It's 23 years.
+23	18.533	0.12099999999999866	4	It's 23 years.
+years.	18.734	0.33999999999999986	4	It's 23 years.
+Four	19.794	0.26099999999999923	5	Four months, eight days.
+months,	20.115	0.28000000000000114	5	Four months, eight days.
+eight	20.515	0.14000000000000057	5	Four months, eight days.
+days.	20.675	0.259999999999998	5	Four months, eight days.
+Doyle?	25.979	0.3200000000000003	6	Doyle?
+But	33.384	0.1599999999999966	7	But I was prepared.
+I	33.584	0.05999999999999517	7	But I was prepared.
+was	33.684	0.12100000000000222	7	But I was prepared.
+prepared.	34.085	0.5399999999999991	7	But I was prepared.
+I	34.745	0.10000000000000142	8	I knew.
+knew.	34.945	0.2610000000000028	8	I knew.
+The	35.486	0.14000000000000057	9	The theory, I knew.
+theory,	35.706	0.4199999999999946	9	The theory, I knew.
+I	36.226	0.0799999999999983	9	The theory, I knew.
+knew.	36.326	0.4410000000000025	9	The theory, I knew.
+And	40.27	0.0799999999999983	10	 And Miller.
+Miller.	40.41	0.3400000000000034	10	 And Miller.
+There's	42.952	0.20000000000000284	11	There's nothing here for us.
+nothing	43.172	0.22000000000000597	11	There's nothing here for us.
+here	43.432	0.14000000000000057	11	There's nothing here for us.
+for	43.592	0.14000000000000057	11	There's nothing here for us.
+us.	43.812	0.10000000000000142	11	There's nothing here for us.
+Why	47.954	0.2010000000000005	12	Why didn't you sleep?
+didn't	48.175	0.1600000000000037	12	Why didn't you sleep?
+you	48.355	0.12000000000000455	12	Why didn't you sleep?
+sleep?	48.515	0.3999999999999986	12	Why didn't you sleep?
+Oh,	50.256	0.11999999999999744	13	Oh, I had a couple of stretches.
+I	50.436	0.0799999999999983	13	Oh, I had a couple of stretches.
+had	50.556	0.1600000000000037	13	Oh, I had a couple of stretches.
+a	50.736	0.04000000000000625	13	Oh, I had a couple of stretches.
+couple	50.816	0.23999999999999488	13	Oh, I had a couple of stretches.
+of	51.096	0.04000000000000625	13	Oh, I had a couple of stretches.
+stretches.	51.176	0.4409999999999954	13	Oh, I had a couple of stretches.
+I	52.837	0.0799999999999983	14	I stopped believing you were coming back.
+stopped	52.957	0.240000000000002	14	I stopped believing you were coming back.
+believing	53.217	0.3610000000000042	14	I stopped believing you were coming back.
+you	53.598	0.0799999999999983	14	I stopped believing you were coming back.
+were	53.718	0.09999999999999432	14	I stopped believing you were coming back.
+coming	53.858	0.2600000000000051	14	I stopped believing you were coming back.
+back.	54.158	0.7199999999999989	14	I stopped believing you were coming back.
+Something	54.958	0.32100000000000506	15	Something seemed wrong about dreaming my life for me.
+seemed	55.299	0.20000000000000284	15	Something seemed wrong about dreaming my life for me.
+wrong	55.539	0.17999999999999972	15	Something seemed wrong about dreaming my life for me.
+about	55.739	0.17999999999999972	15	Something seemed wrong about dreaming my life for me.
+dreaming	55.959	0.29999999999999716	15	Something seemed wrong about dreaming my life for me.
+my	56.279	0.11999999999999744	15	Something seemed wrong about dreaming my life for me.
+life	56.439	0.17999999999999972	15	Something seemed wrong about dreaming my life for me.
+for	56.659	0.14099999999999824	15	Something seemed wrong about dreaming my life for me.
+me.	56.82	0.1599999999999966	15	Something seemed wrong about dreaming my life for me.
+I	58.621	0.11999999999999744	16	I learned what I could from the black hole.
+learned	58.861	0.35999999999999943	16	I learned what I could from the black hole.
+what	59.281	0.14000000000000057	16	I learned what I could from the black hole.
+I	59.461	0.060000000000002274	16	I learned what I could from the black hole.
+could	59.581	0.19999999999999574	16	I learned what I could from the black hole.
+from	59.841	0.14000000000000057	16	I learned what I could from the black hole.
+the	60.021	0.0799999999999983	16	I learned what I could from the black hole.
+black	60.141	0.24099999999999966	16	I learned what I could from the black hole.
+hole.	60.422	0.28000000000000114	16	I learned what I could from the black hole.
+But	61.943	0.10000000000000142	17	But I couldn't send anything your father.
+I	62.083	0.020000000000003126	17	But I couldn't send anything your father.
+couldn't	62.143	0.240000000000002	17	But I couldn't send anything your father.
+send	62.403	0.20000000000000284	17	But I couldn't send anything your father.
+anything	62.643	0.29999999999999716	17	But I couldn't send anything your father.
+your	62.963	0.21999999999999886	17	But I couldn't send anything your father.
+father.	63.203	0.35999999999999943	17	But I couldn't send anything your father.
+We've	64.444	0.1599999999999966	18	We've been receiving, but nothing gets out.
+been	64.624	0.1600000000000108	18	We've been receiving, but nothing gets out.
+receiving,	64.824	0.4399999999999977	18	We've been receiving, but nothing gets out.
+but	65.284	0.09999999999999432	18	We've been receiving, but nothing gets out.
+nothing	65.445	0.2400000000000091	18	We've been receiving, but nothing gets out.
+gets	65.705	0.20000000000000284	18	We've been receiving, but nothing gets out.
+out.	66.025	0.1599999999999966	18	We've been receiving, but nothing gets out.
+We've	74.297	0.14000000000000057	19	 We've got years of messages stored.
+got	74.477	0.1799999999999926	19	 We've got years of messages stored.
+years	74.737	0.32100000000001216	19	 We've got years of messages stored.
+of	75.338	0.10000000000000853	19	 We've got years of messages stored.
+messages	75.478	0.46000000000000796	19	 We've got years of messages stored.
+stored.	75.978	0.4000000000000057	19	 We've got years of messages stored.
+Cooper.	77.539	0.5	20	Cooper.
+The	78.72	0.09999999999999432	21	The messages span 23 years.
+messages	78.86	0.5600000000000023	21	The messages span 23 years.
+span	79.48	0.7809999999999917	21	The messages span 23 years.
+23	80.381	0.1599999999999966	21	The messages span 23 years.
+years.	80.621	0.4000000000000057	21	The messages span 23 years.
+I	83.783	0.060000000000002274	22	I can't play in front of a game.
+can't	83.903	0.1599999999999966	22	I can't play in front of a game.
+play	84.083	0.12000000000000455	22	I can't play in front of a game.
+in	84.223	0.04000000000000625	22	I can't play in front of a game.
+front	84.283	0.14000000000000057	22	I can't play in front of a game.
+of	84.483	0.060000000000002274	22	I can't play in front of a game.
+a	84.583	0.04000000000000625	22	I can't play in front of a game.
+game.	84.663	0.24099999999999966	22	I can't play in front of a game.
+Hey,	88.566	0.1799999999999926	23	Hey, Dad.
+Dad.	88.766	0.3399999999999892	23	Hey, Dad.
+Checking	91.187	0.30100000000000193	24	Checking in, Zane and I. Um...
+in,	91.568	0.1599999999999966	24	Checking in, Zane and I. Um...
+Zane	92.308	0.13999999999998636	24	Checking in, Zane and I. Um...
+and	92.468	0.09999999999999432	24	Checking in, Zane and I. Um...
+I.	92.748	0.0799999999999983	24	Checking in, Zane and I. Um...
+Um...	95.17	0.2600000000000051	24	Checking in, Zane and I. Um...
+I	96.351	0.060000000000002274	25	I finished second in school.
+finished	96.431	0.21999999999999886	25	I finished second in school.
+second	96.671	0.23999999999999488	25	I finished second in school.
+in	96.931	0.060000000000002274	25	I finished second in school.
+school.	97.011	0.35999999999999943	25	I finished second in school.
+This	99.552	0.24099999999999966	26	This curlic's still giving me C, so...
+curlic's	99.833	0.3200000000000074	26	This curlic's still giving me C, so...
+still	100.173	0.1799999999999926	26	This curlic's still giving me C, so...
+giving	100.373	0.19999999999998863	26	This curlic's still giving me C, so...
+me	100.593	0.09999999999999432	26	This curlic's still giving me C, so...
+C,	100.733	0.37999999999999545	26	This curlic's still giving me C, so...
+so...	101.153	0.3009999999999877	26	This curlic's still giving me C, so...
+pulled	102.432	0.1799999999999926	27	 pulled me down, but, you know, second's not bad.
+me	102.632	0.0799999999999983	27	 pulled me down, but, you know, second's not bad.
+down,	102.752	0.2600000000000051	27	 pulled me down, but, you know, second's not bad.
+but,	103.032	0.18099999999999739	27	 pulled me down, but, you know, second's not bad.
+you	103.433	0.09999999999999432	27	 pulled me down, but, you know, second's not bad.
+know,	103.553	0.10000000000000853	27	 pulled me down, but, you know, second's not bad.
+second's	103.673	0.2600000000000051	27	 pulled me down, but, you know, second's not bad.
+not	103.953	0.1599999999999966	27	 pulled me down, but, you know, second's not bad.
+bad.	104.133	2.2420000000000044	27	 pulled me down, but, you know, second's not bad.
+Grandpa	106.395	0.3400000000000034	28	Grandpa attended the ceremony.
+attended	106.775	0.24099999999999966	28	Grandpa attended the ceremony.
+the	107.036	0.060000000000002274	28	Grandpa attended the ceremony.
+ceremony.	107.136	0.6400000000000006	28	Grandpa attended the ceremony.
+Um,	110.778	0.16099999999998715	29	Um, oh.
+oh.	111.439	0.12000000000000455	29	Um, oh.
+I	113.22	0.0799999999999983	30	I met another girl, Dad.
+met	113.32	0.12000000000000455	30	I met another girl, Dad.
+another	113.46	0.22100000000000364	30	I met another girl, Dad.
+girl,	113.701	0.22000000000001307	30	I met another girl, Dad.
+Dad.	113.941	0.3199999999999932	30	I met another girl, Dad.
+I,	115.402	0.03999999999999204	31	I, uh, I don't really think this is the one.
+uh,	115.482	0.3200000000000074	31	I, uh, I don't really think this is the one.
+I	115.822	0.01999999999999602	31	I, uh, I don't really think this is the one.
+don't	117.624	0.1600000000000108	31	I, uh, I don't really think this is the one.
+really	117.804	0.20000000000000284	31	I, uh, I don't really think this is the one.
+think	118.044	0.14000000000000057	31	I, uh, I don't really think this is the one.
+this	118.204	0.12000000000000455	31	I, uh, I don't really think this is the one.
+is	118.384	0.0799999999999983	31	I, uh, I don't really think this is the one.
+the	118.484	0.0799999999999983	31	I, uh, I don't really think this is the one.
+one.	118.764	0.12100000000000932	31	I, uh, I don't really think this is the one.
+Name's	120.926	0.20000000000000284	32	Name's Lovis.
+Lovis.	121.166	0.40099999999999625	32	Name's Lovis.
+Is	121.967	0.12000000000000455	33	Is that right there?
+that	122.107	0.20000000000000284	33	Is that right there?
+right	122.327	0.1599999999999966	33	Is that right there?
+there?	122.527	0.2810000000000059	33	Is that right there?
+Murphy	126.57	0.2810000000000059	34	Murphy stole Grandpa's car.
+stole	126.871	0.20000000000000284	34	Murphy stole Grandpa's car.
+Grandpa's	127.091	0.30000000000001137	34	Murphy stole Grandpa's car.
+car.	127.431	0.3200000000000074	34	Murphy stole Grandpa's car.
+She	129.252	0.10099999999999909	35	She crashed it.
+crashed	129.393	0.30000000000001137	35	She crashed it.
+it.	129.793	0.09999999999999432	35	She crashed it.
+She's	130.513	0.16100000000000136	36	She's okay, though.
+okay,	130.714	0.30000000000001137	36	She's okay, though.
+though.	131.034	0.1599999999999966	36	She's okay, though.
+Hey,	132.573	0.12000000000000455	37	 Hey, Dad.
+Dad.	132.713	0.2600000000000193	37	 Hey, Dad.
+Look	133.734	0.3599999999999852	38	Look at this.
+at	134.614	0.09999999999999432	38	Look at this.
+this.	134.754	0.3610000000000184	38	Look at this.
+Your	136.696	0.2400000000000091	39	Your grandpa.
+grandpa.	136.956	0.5600000000000023	39	Your grandpa.
+His	139.638	0.13999999999998636	40	His name's Jesse.
+name's	139.798	0.2599999999999909	40	His name's Jesse.
+Jesse.	140.118	0.4399999999999977	40	His name's Jesse.
+I	142.079	0.09999999999999432	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+kind	142.219	0.1810000000000116	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+of	142.44	0.060000000000002274	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+wanted	142.52	0.11999999999997613	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+to	142.66	0.0800000000000125	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+call	142.76	0.14000000000001478	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+him	142.92	0.10000000000002274	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+Coop,	143.06	0.30000000000001137	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+but	143.4	0.19999999999998863	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+Louis	143.64	0.24100000000001387	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+says,	143.901	0.3199999999999932	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+uh,	144.441	0.18000000000000682	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+maybe	145.742	0.2400000000000091	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+next	146.002	0.19999999999998863	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+time.	146.222	0.29999999999998295	41	I kind of wanted to call him Coop, but Louis says, uh, maybe next time.
+But	147.463	0.09999999999999432	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+Donald	147.583	0.2599999999999909	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+says	147.863	0.13999999999998636	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+he's	148.023	0.12000000000000455	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+already	148.183	0.20000000000001705	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+earned	148.444	0.18000000000000682	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+a	148.684	0.020000000000010232	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+great	148.744	0.21999999999999886	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+part,	148.984	0.29999999999998295	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+so	149.304	0.2599999999999909	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+we'll	150.045	0.18000000000000682	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+just	150.245	0.09999999999999432	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+leave	150.405	0.1599999999999966	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+it	150.645	0.03999999999999204	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+at	150.705	0.05999999999997385	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+that.	150.785	0.28000000000000114	42	But Donald says he's already earned a great part, so we'll just leave it at that.
+Oh,	151.846	1.9609999999999843	43	Oh, dear.
+dear.	154.047	0.9809999999999945	43	Oh, dear.
+Oh,	156.149	0.1599999999999966	44	Oh, dear.
+dear.	156.369	0.30000000000001137	44	Oh, dear.
+Say	157.63	0.20000000000001705	45	Say bye-bye, Grandpa.
+bye-bye,	157.85	0.4000000000000057	45	Say bye-bye, Grandpa.
+Grandpa.	158.27	0.47999999999998977	45	Say bye-bye, Grandpa.
+Bye-bye,	159.491	0.3599999999999852	46	Bye-bye, Grandpa.
+Grandpa.	159.871	0.37999999999999545	46	Bye-bye, Grandpa.
+It's	160.271	0.0800000000000125	47	It's okay.
+okay.	160.371	0.09999999999999432	47	It's okay.
+It's	160.511	0.10099999999999909	48	It's okay.
+okay.	160.632	0.5199999999999818	48	It's okay.
+It's	161.955	0.09999999999999432	49	 It's been a while.
+been	162.095	0.14000000000001478	49	 It's been a while.
+a	162.255	0.020000000000010232	49	 It's been a while.
+while.	162.295	0.2810000000000059	49	 It's been a while.
+What	165.478	3.6229999999999905	50	What with Jesse and all.
+with	169.121	0.1799999999999784	50	What with Jesse and all.
+Jesse	169.321	0.32099999999999795	50	What with Jesse and all.
+and	169.682	0.0800000000000125	50	What with Jesse and all.
+all.	169.842	7.665999999999997	50	What with Jesse and all.
+Grandpa	177.528	0.46100000000001273	51	Grandpa died last week.
+died	178.029	0.28000000000000114	51	Grandpa died last week.
+last	178.369	0.21999999999999886	51	Grandpa died last week.
+week.	178.629	1.5810000000000173	51	Grandpa died last week.
+We	180.23	0.12100000000000932	52	We buried him out in the back 40 next to Mom and Jesse.
+buried	180.371	0.2599999999999909	52	We buried him out in the back 40 next to Mom and Jesse.
+him	180.651	0.07999999999998408	52	We buried him out in the back 40 next to Mom and Jesse.
+out	180.751	0.12000000000000455	52	We buried him out in the back 40 next to Mom and Jesse.
+in	180.891	0.040000000000020464	52	We buried him out in the back 40 next to Mom and Jesse.
+the	180.951	0.0800000000000125	52	We buried him out in the back 40 next to Mom and Jesse.
+back	181.051	0.20000000000001705	52	We buried him out in the back 40 next to Mom and Jesse.
+40	181.291	0.36099999999999	52	We buried him out in the back 40 next to Mom and Jesse.
+next	181.712	0.20000000000001705	52	We buried him out in the back 40 next to Mom and Jesse.
+to	181.932	0.12000000000000455	52	We buried him out in the back 40 next to Mom and Jesse.
+Mom	182.092	0.28000000000000114	52	We buried him out in the back 40 next to Mom and Jesse.
+and	182.432	0.12000000000000455	52	We buried him out in the back 40 next to Mom and Jesse.
+Jesse.	184.054	0.3599999999999852	52	We buried him out in the back 40 next to Mom and Jesse.
+Which	185.955	0.21999999999999886	53	Which is where we would have buried you if you'd ever come back.
+is	186.235	0.10099999999999909	53	Which is where we would have buried you if you'd ever come back.
+where	186.656	0.1599999999999966	53	Which is where we would have buried you if you'd ever come back.
+we	186.856	0.060000000000002274	53	Which is where we would have buried you if you'd ever come back.
+would	186.936	0.12000000000000455	53	Which is where we would have buried you if you'd ever come back.
+have	187.076	0.0800000000000125	53	Which is where we would have buried you if you'd ever come back.
+buried	187.196	0.2400000000000091	53	Which is where we would have buried you if you'd ever come back.
+you	187.456	0.20100000000002183	53	Which is where we would have buried you if you'd ever come back.
+if	187.697	0.07999999999998408	53	Which is where we would have buried you if you'd ever come back.
+you'd	187.817	0.29999999999998295	53	Which is where we would have buried you if you'd ever come back.
+ever	188.157	0.19999999999998863	53	Which is where we would have buried you if you'd ever come back.
+come	190.059	0.19999999999998863	53	Which is where we would have buried you if you'd ever come back.
+back.	190.279	0.21999999999999886	53	Which is where we would have buried you if you'd ever come back.
+Marv	192.814	0.20000000000001705	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+was	193.034	0.1599999999999966	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+there	193.214	0.18000000000000682	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+at	193.434	0.060000000000002274	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+the	193.514	0.060000000000002274	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+funeral	193.614	0.48099999999999454	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+and	194.155	0.12000000000000455	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+we	196.015	0.0800000000000125	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+don't	196.115	0.1599999999999966	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+see	196.295	0.12000000000000455	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+her	196.435	0.07999999999998408	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+that	196.535	0.14099999999999113	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+much,	196.716	0.23999999999998067	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+but	197.036	0.1599999999999966	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+she	197.216	0.13999999999998636	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+came	197.396	0.2400000000000091	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+for	197.656	0.12000000000000455	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+that.	197.796	0.28000000000000114	54	 Marv was there at the funeral and we don't see her that much, but she came for that.
+You	201.637	0.1599999999999966	55	You aren't listening to this, I know that.
+aren't	201.817	0.22100000000000364	55	You aren't listening to this, I know that.
+listening	202.058	0.36000000000001364	55	You aren't listening to this, I know that.
+to	202.438	0.040000000000020464	55	You aren't listening to this, I know that.
+this,	202.538	0.23999999999998067	55	You aren't listening to this, I know that.
+I	202.918	0.09999999999999432	55	You aren't listening to this, I know that.
+know	203.038	0.11999999999997613	55	You aren't listening to this, I know that.
+that.	203.198	0.21999999999999886	55	You aren't listening to this, I know that.
+All	207.24	0.12000000000000455	56	All these messages are just drifting out there in the darkness.
+these	207.38	0.1599999999999966	56	All these messages are just drifting out there in the darkness.
+messages	207.58	0.5799999999999841	56	All these messages are just drifting out there in the darkness.
+are	208.22	0.09999999999999432	56	All these messages are just drifting out there in the darkness.
+just	208.34	0.2599999999999909	56	All these messages are just drifting out there in the darkness.
+drifting	211.141	0.6599999999999966	56	All these messages are just drifting out there in the darkness.
+out	213.082	0.14000000000001478	56	All these messages are just drifting out there in the darkness.
+there	213.242	0.2400000000000091	56	All these messages are just drifting out there in the darkness.
+in	213.522	0.10000000000002274	56	All these messages are just drifting out there in the darkness.
+the	213.642	0.060000000000002274	56	All these messages are just drifting out there in the darkness.
+darkness.	213.762	0.5	56	All these messages are just drifting out there in the darkness.
+Lois	215.903	0.36000000000001364	57	Lois says that I have to let you go.
+says	216.543	0.28000000000000114	57	Lois says that I have to let you go.
+that	216.863	0.2400000000000091	57	Lois says that I have to let you go.
+I	219.104	0.03999999999999204	57	Lois says that I have to let you go.
+have	219.184	0.14000000000001478	57	Lois says that I have to let you go.
+to	219.364	0.37999999999999545	57	Lois says that I have to let you go.
+let	220.345	0.18000000000000682	57	Lois says that I have to let you go.
+you	220.565	0.12000000000000455	57	Lois says that I have to let you go.
+go.	220.725	0.2400000000000091	57	Lois says that I have to let you go.
+And,	222.46	0.42099999999999227	58	 And, uh, so...
+uh,	223.261	0.9610000000000127	58	 And, uh, so...
+so...	224.242	0.4399999999999977	58	 And, uh, so...
+I	225.663	2.2819999999999823	59	I guess I'll let you go.
+guess	228.845	0.42099999999999227	59	I guess I'll let you go.
+I'll	230.547	0.1599999999999966	59	I guess I'll let you go.
+let	230.967	0.1799999999999784	59	I guess I'll let you go.
+you	231.187	0.11999999999997613	59	I guess I'll let you go.
+go.	231.348	0.339999999999975	59	I guess I'll let you go.
+I	232.969	0.0800000000000125	60	I don't know where you are, Dad.
+don't	233.089	0.14000000000001478	60	I don't know where you are, Dad.
+know	233.249	0.0800000000000125	60	I don't know where you are, Dad.
+where	233.349	0.3400000000000034	60	I don't know where you are, Dad.
+you	233.709	0.08099999999998886	60	I don't know where you are, Dad.
+are,	233.85	0.14000000000001478	60	I don't know where you are, Dad.
+Dad.	234.01	0.3400000000000034	60	I don't know where you are, Dad.
+I	234.37	0.01999999999998181	61	I hope that you're at peace and...
+hope	234.45	1.9020000000000152	61	I hope that you're at peace and...
+that	236.372	0.1599999999999966	61	I hope that you're at peace and...
+you're	236.552	0.18000000000000682	61	I hope that you're at peace and...
+at	236.752	0.03999999999999204	61	I hope that you're at peace and...
+peace	236.832	0.3199999999999932	61	I hope that you're at peace and...
+and...	237.633	0.3400000000000034	61	I hope that you're at peace and...
+Hey,	255.288	0.1599999999999966	62	 Hey, Dad.
+Dad.	255.468	0.28000000000000114	62	 Hey, Dad.
+You	260.63	0.20100000000002183	63	You son of a bitch.
+son	260.931	0.34000000000003183	63	You son of a bitch.
+of	261.311	0.040000000000020464	63	You son of a bitch.
+a	261.371	0.020000000000038654	63	You son of a bitch.
+bitch.	261.411	0.30000000000001137	63	You son of a bitch.
+I	266.593	0.060000000000002274	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+never	266.673	0.18000000000000682	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+made	266.893	0.160000000000025	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+one	267.133	0.08100000000001728	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+of	267.254	0.03999999999996362	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+these	267.334	0.2799999999999727	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+when	267.774	0.22000000000002728	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+you	268.014	0.07999999999998408	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+were	268.134	0.0999999999999659	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+still	268.254	0.15999999999996817	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+responding	268.434	0.5	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+because	268.954	0.19999999999998863	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+I	269.174	0.020000000000038654	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+was	269.314	0.1209999999999809	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+so	269.455	0.1400000000000432	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+mad	269.635	0.13999999999998636	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+at	269.815	0.040000000000020464	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+you	269.875	0.10000000000002274	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+for	270.015	0.10000000000002274	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+leaving.	270.175	0.3199999999999932	64	I never made one of these when you were still responding because I was so mad at you for leaving.
+And	274.477	0.10000000000002274	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+then	274.597	0.12000000000000455	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+when	274.737	0.0999999999999659	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+you	274.857	0.0999999999999659	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+went	274.977	0.160000000000025	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+quiet,	275.177	0.4399999999999977	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+it	275.677	0.060000000000002274	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+seemed	279.119	0.19999999999998863	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+like	279.339	0.13999999999998636	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+I	279.519	0.040000000000020464	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+should	279.599	0.18000000000000682	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+live	279.839	0.13999999999998636	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+with	279.999	0.12000000000000455	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+that	280.139	0.1209999999999809	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+decision,	280.3	0.4399999999999977	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+and	280.8	0.07999999999998408	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+I	280.94	0.060000000000002274	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+have.	281.04	0.21999999999997044	65	And then when you went quiet, it seemed like I should live with that decision, and I have.
+Today's	286.659	0.5400000000000205	66	 Today's my birthday.
+my	287.32	0.13999999999998636	66	 Today's my birthday.
+birthday.	287.52	0.5200000000000387	66	 Today's my birthday.
+And	292.524	0.07999999999998408	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+it's	292.644	0.07999999999998408	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+a	292.784	0.01999999999998181	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+special	292.864	0.4399999999999977	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+one	293.524	0.1209999999999809	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+because	293.745	0.339999999999975	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+you	294.145	0.160000000000025	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+told	294.365	0.2599999999999909	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+me...	294.685	5.404999999999973	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+You	300.11	0.060000000000002274	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+once	300.29	0.13999999999998636	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+told	300.49	0.2400000000000091	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+me	300.79	0.18000000000000682	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+that	301.05	0.3009999999999877	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+when	301.491	0.10000000000002274	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+you	301.631	0.10000000000002274	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+came	301.791	0.18000000000000682	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+back	302.011	0.17999999999994998	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+we	302.231	0.07999999999998408	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+might	302.351	0.16100000000000136	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+be	302.532	0.10000000000002274	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+the	302.652	0.10000000000002274	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+same	302.792	0.22000000000002728	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+age.	303.152	0.18000000000000682	67	And it's a special one because you told me... You once told me that when you came back we might be the same age.
+And	306.014	0.12000000000000455	68	And today I'm the age you were when you left.
+today	306.174	0.30100000000004457	68	And today I'm the age you were when you left.
+I'm	306.555	0.12000000000000455	68	And today I'm the age you were when you left.
+the	306.695	0.10000000000002274	68	And today I'm the age you were when you left.
+age	306.915	0.13999999999998636	68	And today I'm the age you were when you left.
+you	307.095	0.1199999999999477	68	And today I'm the age you were when you left.
+were	307.255	0.160000000000025	68	And today I'm the age you were when you left.
+when	307.455	0.10000000000002274	68	And today I'm the age you were when you left.
+you	307.575	0.12100000000003774	68	And today I'm the age you were when you left.
+left.	307.756	0.3800000000000523	68	And today I'm the age you were when you left.
+So	311.999	0.03999999999996362	69	So it might be a real good time for you to come back.
+it	312.079	0.07999999999998408	69	So it might be a real good time for you to come back.
+might	312.179	0.20000000000004547	69	So it might be a real good time for you to come back.
+be	312.399	0.160000000000025	69	So it might be a real good time for you to come back.
+a	312.579	0.040000000000020464	69	So it might be a real good time for you to come back.
+real	312.74	0.19999999999998863	69	So it might be a real good time for you to come back.
+good	312.98	0.13999999999998636	69	So it might be a real good time for you to come back.
+time	313.14	0.19999999999998863	69	So it might be a real good time for you to come back.
+for	313.38	0.07999999999998408	69	So it might be a real good time for you to come back.
+you	313.48	0.0999999999999659	69	So it might be a real good time for you to come back.
+to	313.6	0.03999999999996362	69	So it might be a real good time for you to come back.
+come	313.72	0.17999999999994998	69	So it might be a real good time for you to come back.
+back.	313.92	0.26099999999996726	69	So it might be a real good time for you to come back.
